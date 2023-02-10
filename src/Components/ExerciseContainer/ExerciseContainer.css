@@ -1,0 +1,19 @@
+.exercises-body{
+    height: 100%;
+    background-color: #F2F4FA;
+    
+}
+.exercises-container{
+
+  
+    width: 80%;
+    margin: auto;
+}
+.logo-container h1{
+    margin-left: 20px;
+    font-weight: bold;
+    color: #8081e6;
+}
+.exercises-section{
+    width: 100%;
+}

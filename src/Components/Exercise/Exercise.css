@@ -1,0 +1,39 @@
+.exercise-box{
+    background-color: white;
+    height: auto;
+
+    padding: 15px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.exercise-img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+.exercise-box button{
+  
+    background-color: #5D5FEF;
+    border: none;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.exercise-box h3{
+    font-weight: 600;
+}
+.exercise-box p{
+    color: #848484;
+
+}
+.font-bold{
+    font-weight: bold;
+    
+}
+.exercise-box h5,h6{
+    color: #434343;
+}
