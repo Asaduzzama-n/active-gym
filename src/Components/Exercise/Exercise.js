@@ -1,7 +1,7 @@
 import React from 'react';
 import './Exercise.css'
-const Exercise = (props) => {
-    const {time,age,picture,name} = props.exercise;
+const Exercise = ({exercise,handleTaskList}) => {
+    const {time,age,picture,name} = exercise;
     return (
         <div className='exercise-box col-md-5 col-lg-3 mx-3  my-3'>
             <img className='exercise-img' src={picture} alt="" />
@@ -10,7 +10,7 @@ const Exercise = (props) => {
                  nihil ab!  necessitatibus!</p>
             <h5>For age: <span className='font-bold'>{age}</span></h5>
             <h6>Time Required: <span className='font-bold'>{time}s</span> </h6>
-            <button>Add to List</button>
+            <button onClick={()=>handleTaskList(exercise)}>Add to List</button>
         </div>
     );
 };

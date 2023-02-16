@@ -4,17 +4,23 @@ import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 
 import './ExerciseContainer.css'
 import Exercise from '../Exercise/Exercise';
+import { addToDb } from '../../Utilities/fakeDb';
 const ExerciseContainer = () => {
 
 
     const [exercises, setExercises] = useState([]);
-
+    const [list, setList] = useState([]);
     useEffect(() => {
         fetch('fake-data.json')
             .then(res => res.json())
             .then(data => setExercises(data))
     }, [])
 
+    const handleTaskList = (selectedExercise)=>{
+
+
+        addToDb(selectedExercise._id);
+    } 
     return (
         <div className="exercises-body">
             <div className='exercises-container py-5'>
@@ -29,7 +35,7 @@ const ExerciseContainer = () => {
                 </div>
                 <div className='exercises-section mt-5 row'>
                     {
-                        exercises.map(exercise => <Exercise exercise={exercise} key={exercise._id}></Exercise>)
+                        exercises.map(exercise => <Exercise handleTaskList={handleTaskList} exercise={exercise} key={exercise._id}></Exercise>)
                     }
                 </div>
             </div>
